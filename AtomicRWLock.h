@@ -40,11 +40,11 @@ class AtomicRWLock {
 private:
 	std::atomic<uint_fast32_t> ThisLock; /*!< The atomic variable containing the Lock state, including its value (EMPTY or POPULATED) in VALUE_BITS, whether the Lock is acquired for Writing or not
 										 (WRITER_BIT) and the spin count (READER_COUNT)
-										 0		2		3					31
+										 0	 2	 3		     31
 										 |-------|-------|-------------------|
-										 |VALUE	 |WRITER |READER_COUNT		 |
-										 |BITS	 |BIT	 |					 |
-										 |		 |		 |					 |
+										 |VALUE	 |WRITER |READER_COUNT       |
+										 |BITS	 |BIT	 |		     |
+										 |		 |		     |					 |
 										 |-------|-------|-------------------|
 										 */
 public:
